@@ -11,6 +11,23 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new
   end
 
+  def edit
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_params)
+        format.html { redirect_to @portfolio_item, notice: 'Blog was successfully updated.' }
+        format.json { render :show, status: :ok, location: @portfolio_item }
+      else
+        format.html { render :edit }
+        format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
     respond_to do |format|
@@ -26,16 +43,7 @@ class PortfoliosController < ApplicationController
 
   private
 
-  #   def portfolio_params
-  #     params.require(:portfolio_item).permit(
-  #       :title,
-  #       :subtitle,
-  #       :body,
-  #       :main_image,
-  #       :thumb_image
-  #     )
-  #   end
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body)
+    params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image)
   end
 end

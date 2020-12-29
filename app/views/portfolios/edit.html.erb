@@ -1,0 +1,22 @@
+<h1>Update Portfolio item</h1>
+
+<%= form_for(@portfolio_item) do |f| %>
+<div class="field">
+    <%= f.text_field :title, placeholder: "Title" %>
+</div>
+<div class="field">
+    <%= f.text_field :subtitle, placeholder: "Subtitle"  %>
+</div>
+<div class="field">
+    <%=  f.text_area :body, placeholder: "Body"  %>
+</div>
+<div class="field">
+    <%= f.text_field :thumb_image, placeholder: "Thumb Image"  %>
+</div>
+<div class="field">
+    <%= f.text_field :main_image, placeholder: "Main Image"  %>
+</div>
+<div class="action">
+    <%= f.submit %>
+</div>
+<% end %>
