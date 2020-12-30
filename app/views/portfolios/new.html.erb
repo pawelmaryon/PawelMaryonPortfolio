@@ -16,6 +16,11 @@
 <div class="field">
     <%= f.text_field :main_image, placeholder: "Main Image"  %>
 </div>
+<ul>
+    <%= f.fields_for :technologies do |technology_form| %>
+    <li><%= technology_form.text_field :name, placecholder: "Technology" %></li>
+    <% end %>
+</ul>
 <div class="action">
     <%= f.submit %>
 </div>
