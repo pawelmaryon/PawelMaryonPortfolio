@@ -22,6 +22,10 @@
     <% end %>
     <%= link_to 'home',  portfolios_path %>
     <%= yield %>
+
+    <% if session[:source] %>
+    <p>Thanks for visitying me from <%= session[:source] %></p>
+    <% end %>
 </body>
 
 </html>
