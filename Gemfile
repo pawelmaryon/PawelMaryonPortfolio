@@ -47,3 +47,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'friendly_id', '~> 5.4.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'devise', '~> 4.2'
