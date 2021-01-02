@@ -8,4 +8,9 @@ module ApplicationHelper
         (link_to 'Register', new_user_registration_path)
     end
   end
+
+  def source_helper
+    greeting = "Thanks for visitying me from #{session[:source]}"
+    content_tag(:p, greeting, class: 'source-greeting') if session[:source]
+  end
 end
