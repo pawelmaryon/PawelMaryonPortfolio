@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <title>PawelMaryonPortfolio</title>
+    <meta name="keywords" content="<%=@seo_keywords %>" />
+
+    <title><%= @page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,13 +16,21 @@
 <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if current_user.is_a?(User) %>
-    <%= link_to 'Logout', destroy_user_session_path, method: 'delete' %>
-    <% else %>
-    <%= link_to 'Login',new_user_session_path  %>
-    <%= link_to 'Register',new_user_registration_path  %>
-    <% end %>
-    <%= link_to 'home',  portfolios_path %>
+    <div>
+        <% if current_user.is_a?(User) %>
+        <%= link_to 'Logout', destroy_user_session_path, method: 'delete' %>
+        <% else %>
+        <%= link_to 'Login',new_user_session_path  %>
+        <%= link_to 'Register',new_user_registration_path  %>
+        <% end %>
+    </div>
+    <div>
+        <div><%= link_to 'home',  root_path %></div>
+        <div><%= link_to 'about-me',  about_me_path %></div>
+        <div><%= link_to 'contact',  contact_path %></div>
+        <div><%= link_to 'blogs',  blogs_path %></div>
+        <div><%= link_to 'portfolio',  portfolios_path %></div>
+    </div>
     <%= yield %>
 
     <% if session[:source] %>
