@@ -24,7 +24,7 @@
         <%= link_to 'Register',new_user_registration_path  %>
         <% end %>
     </div>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar', location: "top" %>
     <%= yield %>
 
     <% if session[:source] %>
