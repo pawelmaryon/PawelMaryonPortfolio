@@ -1,4 +1,6 @@
+
 <%= link_to 'new',  new_portfolio_path if logged_in?(:site_admin) %>
 <%= link_to 'edit',  edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
 <%= link_to 'home',  portfolios_path %>
 <%= link_to 'remove',  portfolios_path if logged_in?(:site_admin) %>
+
