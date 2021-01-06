@@ -1,5 +1,8 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: %i[show edit update destroy]
+
+  before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+   access all: [:show, :index, :react, :ruby_on_rails], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   layout 'portfolio'
   def index
     @portfolio_items = Portfolio.all
@@ -53,6 +56,7 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
+
     @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Portfolio item was removed.' }
