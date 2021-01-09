@@ -2,35 +2,27 @@
 <html>
 
 <head>
-    <meta name="keywords" content="<%=@seo_keywords %>" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title><%= @page_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="<%=@seo_keywords %>" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <header class="mb-auto">
-        <%= render 'shared/navbar' %>
-      </header>
-      <main class="px-3">
-       
+    <div class="cover-container d-flex p-4 mx-auto flex-column">
+        <%= render 'shared/application_nav' %>
         <%= yield %>
-      </main>
-      
-      
-      <footer class="mt-auto text-white-50">
+        <%= render 'shared/application_footer' %>
+
         <%= source_helper%>
-      </footer>
-  
-  </div>
+
+    </div>
 </body>
 
 </html>

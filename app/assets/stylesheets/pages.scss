@@ -1,8 +1,10 @@
+@import "bootstrap";
 /*
  * Globals
  */
-
-
+a {
+  text-decoration: none;
+}
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -11,36 +13,38 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
 /*
  * Base structure
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  background: #333;
+  color: white;
+  min-height: 100vh;
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 50rem;
+  min-height: 100vh;
 }
-
 
 /*
  * Header
  */
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -50,4 +54,12 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+.main-possitioning {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-possitioning {
+  text-align: center;
 }
