@@ -4,10 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="<%=@seo_keywords %>">
 
     <title><%= @page_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="<%=@seo_keywords %>" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,17 +15,13 @@
 </head>
 
 <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div>
+    <div class="cover-container d-flex p-4 mx-auto flex-column applic-layout">
+        <%= render 'shared/application_nav' %>
+        <%= yield %>
+        <%= render 'shared/application_footer' %>
 
+        <%= source_helper%>
     </div>
-    <%= render 'shared/navbar', location: 'top' %>
-    <%= login_helper("nav-link") %>
-    <%= yield %>
-
-    <%= source_helper%>
-
 </body>
 
 </html>
