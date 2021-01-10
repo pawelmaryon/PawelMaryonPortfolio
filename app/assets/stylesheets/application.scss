@@ -1,13 +1,11 @@
 @import "bootstrap";
+
 /*
  * Globals
  */
 a {
   text-decoration: none;
   color: white;
-  &:hover {
-    color: rgb(230, 230, 230);
-  }
 }
 /* Custom default button */
 .btn-secondary,
@@ -66,4 +64,12 @@ body {
 }
 .footer-possitioning {
   text-align: center;
+}
+.applic-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  justify-content: space-between;
 }
