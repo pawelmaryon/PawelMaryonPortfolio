@@ -9,10 +9,9 @@
                   <p class="card-text"><%= portfolio_item.body %></p>
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                          <%= link_to 'edit',  edit_portfolio_path(portfolio_item)  if logged_in?(:site_admin)%>
-                          <%= link_to 'remove',  portfolio_path(portfolio_item), method: :delete , data: { confirm: 'Are you sure?' } if logged_in?(:site_admin)%>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          <%= link_to 'edit',  edit_portfolio_path(portfolio_item), class:"btn btn-sm btn-outline-secondary"  if logged_in?(:site_admin)%>
+                          <%= link_to 'remove',  portfolio_path(portfolio_item), method: :delete , data: { confirm: 'Are you sure?' } , class:"btn btn-sm btn-outline-secondary"if logged_in?(:site_admin)%>
+                         
                       </div>
                       <small class="text-muted">9 mins</small>
                   </div>
