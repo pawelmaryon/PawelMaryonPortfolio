@@ -1,2 +1,3 @@
 1. can not use sudo rvn and rails commands - task for tomorrow 'to find solution to this issue'
-2. late night, will try to code tomorrow
+2. late night, will try to code tomorrow.
+3. I managet to find 20min to write some code. 
