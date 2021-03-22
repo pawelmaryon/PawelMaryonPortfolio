@@ -50,3 +50,4 @@ gem 'devise', '~> 4.2'
 gem 'friendly_id', '~> 5.4.0'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem "font-awesome-rails"
