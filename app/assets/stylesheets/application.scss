@@ -1,7 +1,11 @@
 @import "bootstrap";
+@import "jquery_ui";
 
 /*
  * Globals
+ */
+/*
+ *= require jquery-ui
  */
 a {
   text-decoration: none;
@@ -72,4 +76,7 @@ body {
   align-items: center;
   min-width: 100%;
   justify-content: space-between;
+}
+.margin-header {
+  margin-right: 15px;
 }
