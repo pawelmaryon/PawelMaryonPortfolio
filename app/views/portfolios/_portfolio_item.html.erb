@@ -1,20 +1,18 @@
+<div class="col sortable">
+    <h2><%=link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+    <h4><%= portfolio_item.subtitle %></h4>
+    <div class="card shadow-sm">
+        <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%>
+        <div class="card-body">
+            <p class="card-text"><%= portfolio_item.body %></p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <%= link_to 'edit',  edit_portfolio_path(portfolio_item), class:"btn btn-sm btn-outline-secondary"  if logged_in?(:site_admin)%>
+                    <%= link_to 'remove',  portfolio_path(portfolio_item), method: :delete , data: { confirm: 'Are you sure?' } , class:"btn btn-sm btn-outline-secondary"if logged_in?(:site_admin)%>
 
-
-      <div class="col">
-          <h2><%=link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
-          <h4><%= portfolio_item.subtitle %></h4>
-          <div class="card shadow-sm">
-              <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%>
-              <div class="card-body">
-                  <p class="card-text"><%= portfolio_item.body %></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                          <%= link_to 'edit',  edit_portfolio_path(portfolio_item), class:"btn btn-sm btn-outline-secondary"  if logged_in?(:site_admin)%>
-                          <%= link_to 'remove',  portfolio_path(portfolio_item), method: :delete , data: { confirm: 'Are you sure?' } , class:"btn btn-sm btn-outline-secondary"if logged_in?(:site_admin)%>
-                         
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                  </div>
-              </div>
-          </div>
-      </div>
+                </div>
+                <small class="text-muted">9 mins</small>
+            </div>
+        </div>
+    </div>
+</div>
