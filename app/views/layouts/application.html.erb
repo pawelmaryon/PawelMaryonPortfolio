@@ -13,11 +13,17 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'hello_coffee' %>
+    <%# <%= javascript_pack_tag 'hello_coffee' %> %>
 </head>
 
 <body>
+    <%# <video autoplay muted loop id="myVideo">
+      <source src="/app/assets/video/home-backroung-1.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video> %>
     <div class="cover-container d-flex p-4 mx-auto flex-column applic-layout">
+    <%= video_tag 'home-background-1.mp4',
+                   id: "myVideo" %>
         <%= render 'shared/application_nav' %>
         <%= yield %>
         <%= render 'shared/application_footer' %>
